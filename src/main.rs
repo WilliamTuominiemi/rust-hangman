@@ -9,6 +9,7 @@ fn main() {
     let mut word_guessed = false;
 
     while guesses_left > 0 && !word_guessed {
+        std::process::Command::new("clear").status().unwrap();
         println!("Guess the word: {}", anti_target);
         let mut input = String::new();
         match io::stdin().read_line(&mut input) {
